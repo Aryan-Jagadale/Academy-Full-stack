@@ -1,10 +1,10 @@
 <p align="center">
-  <a href="https://gradgoggles.com">
-    <img alt="KnowledgeHub" src="http://assets.rajrajhans.com/gg_compressed.png" width="250"/>
+  <a href="https://academy.aaryanjagadale.tech/">
+    <img alt="Academy" src="https://res.cloudinary.com/ddaalka6i/image/upload/v1686893053/portfolio/acdemy_nxmisq.png" width="250"/>
   </a>
 </p>
 <h1 align="center">
-  <a href="https://gradgoggles.com">KnowledgeHub</a>
+  <a href="https://academy.aaryanjagadale.tech/">Academy</a>
 </h1>
  KnowledgeHub is an online learning platform that offers a wide range of courses and educational resources to empower students and learners of all backgrounds.
 
