@@ -14,11 +14,10 @@ This repo contains the source code for Academy WebApp.
 
 ### WebApp Screenshots
 
-Following is a sneak peek of how the interface looks. To see the site live, head on over to [https://gradgoggles.com/](https://gradgoggles.com/)
+Following is a sneak peek of how the interface looks. To see the site live, head on over to [https://academy.aaryanjagadale.tech/](https://academy.aaryanjagadale.tech/)
 
-| Home Page                              | Login Page                             | Yearbook                            |
+| Home Page                              | Login Page                             | Admin Dashboard                            |
 | ------------------------------------ | ------------------------------------ | ------------------------------------ |
-| ![](https://res.cloudinary.com/ddaalka6i/image/upload/v1686898651/portfolio/acdemy-home_maneou.png) | ![](https://res.cloudinary.com/ddaalka6i/image/upload/v1686898651/portfolio/acdemy-home_maneou.png) | ![](https://assets.rajrajhans.com/gg3.png) |
+| ![](https://res.cloudinary.com/ddaalka6i/image/upload/v1686898651/portfolio/academy-home_cbh2ns.png) | ![](https://res.cloudinary.com/ddaalka6i/image/upload/v1686898651/portfolio/acdemy-home_maneou.png) | ![](https://res.cloudinary.com/ddaalka6i/image/upload/v1686899059/portfolio/academy-course_lbv7mt.png) |
 
 
-#### To know more about GradGoggles, [read this blog post on rajrajhans.com](https://rajrajhans.com/2020/08/casestudy-gradgoggles/).
