@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://academy.aaryanjagadale.tech/">
-    <img alt="Academy" src="https://res.cloudinary.com/ddaalka6i/image/upload/v1686893053/portfolio/acdemy_nxmisq.png" width="250"/>
+    <img alt="Academy" src="https://res.cloudinary.com/ddaalka6i/image/upload/v1686893053/portfolio/acdemy_nxmisq.png" width="150"/>
   </a>
 </p>
 <h1 align="center">
