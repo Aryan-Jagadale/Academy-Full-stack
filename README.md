@@ -6,7 +6,7 @@
 <h1 align="center">
   <a href="https://academy.aaryanjagadale.tech/">Academy</a>
 </h1>
- KnowledgeHub is an online learning platform that offers a wide range of courses and educational resources to empower students and learners of all backgrounds.
+ Academy is an online learning platform that offers a wide range of courses and educational resources to empower students and learners of all backgrounds.
 
 ---
 
