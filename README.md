@@ -1,46 +1,34 @@
 <p align="center">
-  <a href="https://gradgoggles.com">
-    <img alt="KnowledgeHub" src="http://assets.rajrajhans.com/gg_compressed.png" width="250"/>
+  <a href="https://academy.aaryanjagadale.tech/">
+    <img alt="Academy" src="https://res.cloudinary.com/ddaalka6i/image/upload/v1686893053/portfolio/acdemy_nxmisq.png" width="50"/>
   </a>
 </p>
 <h1 align="center">
-  <a href="https://gradgoggles.com">KnowledgeHub</a>
+  <a href="https://academy.aaryanjagadale.tech/">Academy</a>
 </h1>
- KnowledgeHub is an online learning platform that offers a wide range of courses and educational resources to empower students and learners of all backgrounds.
-
----
-<p align="center">
-  <a href="https://gradgoggles.com" target="_blank">
-    <img alt="website_up" src="https://img.shields.io/badge/Website-Up-<COLOR>.svg?style=flat" width="100"/>
-  </a>
-
-  <a href="https://play.google.com/store/apps/details?id=com.team.android.gradgoggles&hl=en" target="_blank">
-    <img alt="GradGoggles" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" width="100"/>
-  </a>
-</p>
-
+ Academy is an online learning platform that offers a wide range of courses and educational resources to empower students and learners of all backgrounds.
 
 ---
 
-This repo contains the source code for GradGoggles API, WebApp and Android app. The individual repositories for API, WebApp, and Android app are added as submodules in this repo. Here are the individual links for the same -     
-* [GradGoggles API Repo](https://github.com/rajrajhans/gradgoggles-api)
-* [GradGoggles WebApp Repo](https://github.com/rajrajhans/gradgoggles-api)
-* [GradGoggles Android App Repo](https://github.com/khalatevarun/gradgoggles-android)
+This repo contains the source code for Academy WebApp. 
 
 ### WebApp Screenshots
 
-Following is a sneak peek of how the interface looks. To see the site live, head on over to [https://gradgoggles.com/](https://gradgoggles.com/)
+Following is a sneak peek of how the interface looks. To see the site live, head on over to [https://academy.aaryanjagadale.tech/](https://academy.aaryanjagadale.tech/)
 
-| Home Page                              | Login Page                             | Yearbook                            |
+| Home Page                              | Login Page                             | Admin Dashboard                            |
 | ------------------------------------ | ------------------------------------ | ------------------------------------ |
-| ![](https://assets.rajrajhans.com/gg1.png) | ![](https://assets.rajrajhans.com/gg2.png) | ![](https://assets.rajrajhans.com/gg3.png) |
+| ![](https://res.cloudinary.com/ddaalka6i/image/upload/v1686898651/portfolio/academy-home_cbh2ns.png) | ![](https://res.cloudinary.com/ddaalka6i/image/upload/v1686898651/portfolio/acdemy-home_maneou.png) | ![](https://res.cloudinary.com/ddaalka6i/image/upload/v1686899059/portfolio/academy-course_lbv7mt.png) |
 
-### Android App Screenshots
 
-Following is a sneak peek of how the interface looks. To use the app live, head on over to [Google Play Store](https://play.google.com/store/apps/details?id=com.team.android.gradgoggles&hl=en)
+### Features
+- User-friendly Interface: The web app offers an intuitive and easy-to-navigate interface, ensuring smooth user interactions and reducing the learning curve.
+- Course Catalog: A comprehensive course catalog provides users with a diverse selection of courses across various disciplines. It allows for easy browsing, filtering, and searching based on specific preferences and interests.
+- Secure Payment Processing: The website integrates a secure and reliable payment system, ensuring the confidentiality and integrity of user transactions.
+- Registration and Enrollment: The web app facilitates a streamlined registration and enrollment process, enabling users to create accounts, select desired courses, and enroll with just a few clicks.
+- Responsive Design: The website is designed to be responsive, providing an optimal browsing experience across various devices and screen sizes.
 
-| Profile                               | Yearbook                             | Auth Screens                               | Scraps                             |
-| ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ | 
-| ![](https://assets.rajrajhans.com/gg4_1.png) | ![](https://assets.rajrajhans.com/gg5_1.png) | ![](https://assets.rajrajhans.com/gg6_1.png) | ![](https://assets.rajrajhans.com/gg7_1.png) |
+## Errors you may face while deployment:
+- Refer this blog: https://aaryansj.hashnode.dev/efficiently-transmitting-cookies-from-backend-to-frontend-in-a-mern-stack-during-production-deployment
 
-#### To know more about GradGoggles, [read this blog post on rajrajhans.com](https://rajrajhans.com/2020/08/casestudy-gradgoggles/).
+🙏 If you find this repo helpful then don't forget to give a start ❇️ to this repository. :)
