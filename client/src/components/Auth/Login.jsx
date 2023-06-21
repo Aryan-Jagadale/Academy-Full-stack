@@ -9,7 +9,6 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
-  //console.log(email,password);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -18,6 +17,12 @@ const Login = () => {
     }
     //console.log(email,password);
     dispatch(login(email, password));
+  };
+
+  const submitHandlerDemo = (e) => {
+    e.preventDefault();
+    //console.log(email,password);
+    dispatch(login("test@gmail.com", "test@1234"));
   };
 
   return (
@@ -66,11 +71,15 @@ const Login = () => {
                 </Link>
               </div>
 
-              <Button text={"Login"} onClick={submitHandler} />
+              <div className="flex justify-start items-center mb-6">
+                <Button text={"Login"} onClick={submitHandler} />
 
-              <button className="text-center text-gray-800 bg-white-700 hover:underline  font-medium rounded-lg ml-5 mb-2 ">
-                <Link to={"/register"}>Sign up</Link>
-              </button>
+                <button className="text-center text-gray-800 bg-white-700 hover:underline  font-medium rounded-lg ml-5 mb-2 ">
+                  <Link to={"/register"}>Sign up</Link>
+                </button>
+              </div>
+
+              <Button text={"Demo"} onClick={submitHandlerDemo} />
             </div>
           </div>
         </div>

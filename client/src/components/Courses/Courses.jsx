@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 //import { Link } from "react-router-dom";
-import { getAllCourses } from "../../redux/actions/course";
+import {
+  getAllCourses,
+} from "../../redux/actions/course";
 import { toast } from "react-hot-toast";
 import { addToPlaylist } from "../../redux/actions/profile";
 import { loadUser } from "../../redux/actions/user";
+
 
 const Course = ({
   views,
@@ -89,9 +92,9 @@ const Course = ({
 
 const Courses = () => {
   const [keyword, setKeyword] = useState("");
-  const [category, setCategory] = useState("");
+  const [category] = useState("");
   const dispatch = useDispatch();
-  const categories = ["Web Dev", "A.I.", "DSA", "Data_Sci"];
+
 
   const { loading, courses, error, message } = useSelector(
     (state) => state.course
@@ -102,8 +105,33 @@ const Courses = () => {
     dispatch(loadUser());
   };
 
+  //const keys = ["title", "description", "createdBy", "category"];
+
+  /*Debounce function */
+  const debounceFunction = (func, delay) => {
+    let timer;
+    return function () {
+      let self = this;
+      let args = arguments;
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        func.apply(self, args);
+      }, delay);
+    };
+  };
+
+  // eslint-disable-next-line
+  const debounceSearch = useCallback(
+    debounceFunction((category,keyword) => dispatch(getAllCourses(category,keyword)), 200),[]);
+
+  const onInputChangeHandler = (e) => {
+    setKeyword(e.target.value);
+  };
+
   useEffect(() => {
-    dispatch(getAllCourses(category, keyword));
+
+    //dispatch(getAllCourses());
+    debounceSearch(category,keyword)
 
     if (error) {
       toast.error(error);
@@ -114,7 +142,9 @@ const Courses = () => {
       toast.success(message);
       dispatch({ type: "clearMessage" });
     }
-  }, [category, keyword, dispatch, error, message]);
+  }, [dispatch, error, message,keyword,debounceSearch,category]);
+
+  console.log("Category--", category);
 
   return (
     <div>
@@ -124,47 +154,45 @@ const Courses = () => {
         </h1>
       </div>
 
-      <div className="flex flex-wrap items-center  overflow-x-auto overflow-y-hidden py-10 justify-center   bg-white text-gray-800">
-        {categories.map((item) => {
-          return (
-            <button
-              className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 text-gray-500 hover:text-black"
-              key={item}
-              onClick={() => setCategory(item)}
-            >
-              <span>{item}</span>
-            </button>
-          );
-        })}
-      </div>
+     
+
       <br />
 
       <div className="mb-6 w-1/2 m-auto">
         <input
           type="text"
           className="border-solid border-blue-400 border-2 p-3 outline-none md:text-sm w-full"
-          placeholder="Search a course"
+          placeholder="Search a course title"
           value={keyword}
-          onChange={(e) => setKeyword(e.target.value)}
+          onChange={onInputChangeHandler}
         />
       </div>
       <section className="py-10 bg-gray-50">
         <div className="mx-auto grid max-w-6xl  grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3">
           {courses.length > 0 ? (
-            courses.map((item) => (
-              <Course
-                key={item._id}
-                title={item.title}
-                description={item.description}
-                views={item.views}
-                imageSrc={item.poster.url}
-                id={item._id}
-                creator={item.createdBy}
-                lectureCount={item.numOfVideos}
-                addToPlaylistHandler={addToPlaylistHandler}
-                loading={loading}
-              />
-            ))
+            courses
+              /*.filter((item) =>
+                keys.some((key) =>
+                  item[key]
+                    .toString()
+                    .toLowerCase()
+                    .includes(keyword.toString().toLowerCase())
+                )
+              )*/
+              .map((item) => (
+                <Course
+                  key={item._id}
+                  title={item.title}
+                  description={item.description}
+                  views={item.views}
+                  imageSrc={item.poster.url}
+                  id={item._id}
+                  creator={item.createdBy}
+                  lectureCount={item.numOfVideos}
+                  addToPlaylistHandler={addToPlaylistHandler}
+                  loading={loading}
+                />
+              ))
           ) : (
             <div>Course not found</div>
           )}

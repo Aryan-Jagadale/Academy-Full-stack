@@ -30,17 +30,17 @@ const Databox = ({ title, qty, qtyPercentage, profit }) => (
 
 const Bar = ({ title, value, profit }) => (
   <div>
-    <h1 class="text-black m-3">
+    <h1 className="text-black m-3">
       {title}
-      <span class=" text-xs text-gray-400">{value}%</span>
+      <span className={`text-xs`}>&nbsp;{value}%</span>
     </h1>
-    <div class=" h-4 relative w-60 rounded-full overflow-hidden">
-      <div class=" w-full h-full bg-white absolute "></div>
+    <div className=" h-4 relative w-60 rounded-full overflow-hidden">
+      <div className=" w-full h-full bg-white absolute "></div>
       <div
-        class="h-full absolute"
+        className={`h-full absolute text-[${profit ? "green" : "red"}]`}
         style={{
           width: `${value}%`,
-          backgroundColor: `${profit ? "green" : "red"}`,
+          backgroundColor:`${profit ? "green" : "red"}`
         }}
       ></div>
     </div>
@@ -68,6 +68,7 @@ const DashBoard = () => {
     dispatch(getDashboardStats());
   }, [dispatch]);
 
+  console.log("Usercounts", usersCount);
   return (
     <div className="min-h-screen">
       <p className="text-center text-base p-2">
@@ -87,8 +88,8 @@ const DashBoard = () => {
         />
         <Databox
           title="Users"
-          qty={usersCount}
-          qtyPercentage={usersPercentage}
+          qty={usersCount === undefined ? "0" : usersCount}
+          qtyPercentage={usersPercentage === null ? "0" : usersPercentage}
           profit={usersProfit}
         />
         <Databox
@@ -99,14 +100,12 @@ const DashBoard = () => {
         />
       </div>
 
-      
-
       <div className="flex bg-blue-100 w-full">
         <section className="p-4 w-1/2 flex items-center flex-col justify-center">
           <h3>Progress bar</h3>
           <section>
             <Bar profit={viewsProfit} title="Views" value={viewsPercentage} />
-            <Bar profit={usersProfit} title="Users" value={usersPercentage} />
+            <Bar profit={usersProfit} title="Users" value={usersPercentage === null ? "0" : usersPercentage} />
             <Bar
               profit={subscriptionProfit}
               title="Subscription"

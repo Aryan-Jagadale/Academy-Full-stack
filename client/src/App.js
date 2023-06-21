@@ -160,12 +160,39 @@ function App() {
                     </ProtectedRoute>
                   }
                 />
-                {/*AdminRoutes */}
 
-                <Route path="/admin/dashboard" element={<DashBoard />} />
-                <Route path="/admin/createcourse" element={<CreateCourse />} />
-                <Route path="/admin/courses" element={<AdminCourses />} />
-                <Route path="/admin/users" element={<Users />} />
+                <Route
+                  path="/admin/dashboard"
+                  element={
+                    <ProtectedRoute isAuthenticated={isAuthenticated}>
+                      <DashBoard />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/admin/createcourse"
+                  element={
+                    <ProtectedRoute isAuthenticated={isAuthenticated}>
+                      <CreateCourse />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/admin/courses"
+                  element={
+                    <ProtectedRoute isAuthenticated={isAuthenticated}>
+                      <AdminCourses />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/admin/users"
+                  element={
+                    <ProtectedRoute isAuthenticated={isAuthenticated}>
+                      <Users />
+                    </ProtectedRoute>
+                  }
+                />
 
                 <Route path="*" element={<NotFound />} />
               </Routes>
