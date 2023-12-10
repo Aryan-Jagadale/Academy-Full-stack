@@ -29,6 +29,8 @@ Following is a sneak peek of how the interface looks. To see the site live, head
 - Responsive Design: The website is designed to be responsive, providing an optimal browsing experience across various devices and screen sizes.
 
 ## Errors you may face while deployment:
-- Refer this blog: https://aaryansj.hashnode.dev/efficiently-transmitting-cookies-from-backend-to-frontend-in-a-mern-stack-during-production-deployment
+- Refer this blog: https://aaryansj.hashnode.dev/efficiently-transmitting-cookies-from-backend-to-frontend-in-a-mern-stack-during-production-deployment.
 
+  
+For Razorpay payment : Use Card section and use this link https://razorpay.com/docs/payments/payments/test-card-details/
 🙏 If you find this repo helpful then don't forget to give a start ❇️ to this repository. :)
